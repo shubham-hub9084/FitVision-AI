@@ -1,0 +1,52 @@
+FitVision AI - Project Documentation
+
+1. Introduction
+   FitVision AI is a comprehensive, AI-powered fitness and wellness platform designed to help users achieve their health goals through personalized tracking, planning, and real-time guidance. The application serves as a digital personal trainer, offering tools for workout management, nutrition planning, and health metric analysis.
+
+   Built with a modern tech stack, FitVision AI combines a sleek, responsive user interface with robust functionality, featuring secure user authentication, interactive dashboards, and specialized calculators. The platform includes both a public landing page to showcase features and a private user area for personalized fitness management.
+
+2. Technology Stack
+   - Frontend Framework: React.js (Vite)
+   - Styling: Tailwind CSS (v4.0)
+   - Authentication: Clerk (@clerk/clerk-react)
+   - Routing: React Router DOM
+   - Animations: AOS (Animate On Scroll) & Custom CSS Animations
+   - Icons: Remix Icon (remixicon) & React Icons
+   - Deployment: (Ready for deployment on platforms like Vercel/Netlify)
+
+3. Key Features
+
+   3.1. Public Landing Page
+   - Hero Section: Engaging entry point with dynamic visuals and call-to-action.
+   - Features Showcase: Highlights core capabilities like AI tracking and personalized plans.
+   - How It Works: Step-by-step guide for new users.
+   - Testimonials: User success stories to build trust.
+   - Pricing: Clear subscription or interaction models.
+   - Responsive Navigation & Footer: Seamless navigation across devices with a consistent "FitVision AI" brand identity.
+
+   3.2. User Dashboard & Private Area
+   - Secure Authentication: Sign-up/Login protected functionality using Clerk.
+   - Dashboard: Central hub for users to view their progress and daily overview.
+   - Workouts: A dedicated section for accessing and tracking workout routines.
+   - Meal Plans: Nutritional guidance and meal planning tools.
+   - Health Calculators:
+     - BMI Calculator: Tools to assess Body Mass Index.
+     - Calories Calculator: Helps users estimate daily caloric needs based on their goals.
+   - Profile Management: Users can manage their personal details and preferences.
+
+   3.3. UI/UX Design
+   - Dark Mode Support: Fully integrated theme switching (Light/Dark).
+   - Responsive Design: Optimized for Mobile, Tablet, and Desktop.
+   - Interactive Elements: Hover effects, smooth scrolling, and animated transitions for a premium feel.
+
+4. Project Structure (Overview)
+   - src/
+     - components/: Reusable UI components (Navbar, Logo, etc.)
+     - context/: State management (AuthContext, ThemeContext)
+     - Pages/: Main application pages (HomePage, Dashboard, HeroSection, Footer, etc.)
+     - Workouts/: Specific logic and views for workout features
+     - assets/: Static images and resources
+     - lib/: Utility libraries and configurations
+
+5. Conclusion
+   FitVision AI represents a modern approach to digital fitness, leveraging AI and web technologies to provide a holistic health companion. Its modular architecture allows for easy scalability, making it a solid foundation for future AI integrations such as computer vision-based pose correction or machine learning-driven diet recommendations.
