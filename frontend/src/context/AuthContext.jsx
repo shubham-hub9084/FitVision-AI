@@ -14,6 +14,9 @@ export const AuthProvider = ({ children }) => {
         full_name: clerkUser.fullName,
         email: clerkUser.primaryEmailAddress?.emailAddress,
         username: clerkUser.username || clerkUser.firstName,
+        imageUrl: clerkUser.imageUrl, // Keep original for reference
+        profileImage: clerkUser.imageUrl || clerkUser.profileImageUrl || clerkUser.avatarUrl,
+        hasImage: clerkUser.hasImage,
         // Access custom metadata for app-specific fields
         weight: clerkUser.unsafeMetadata?.weight,
         height: clerkUser.unsafeMetadata?.height,

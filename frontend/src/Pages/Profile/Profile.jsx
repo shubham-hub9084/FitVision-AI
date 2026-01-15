@@ -70,10 +70,18 @@ const Profile = () => {
                         {/* Floating Avatar */}
                         <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
                             <div className="relative group">
-                                <div className="w-32 h-32 rounded-full p-1 bg-white dark:bg-slate-700 shadow-xl ring-4 ring-white/50 dark:ring-slate-700/50 ring-offset-2 ring-offset-emerald-600 transition-colors">
-                                    <div className="w-full h-full rounded-full bg-gradient-to-br from-emerald-100 to-teal-50 dark:from-emerald-900 dark:to-teal-800 flex items-center justify-center text-4xl font-bold text-emerald-700 dark:text-emerald-300 select-none">
-                                        {getInitials(user?.full_name)}
-                                    </div>
+                                <div className="w-32 h-32 rounded-full p-1 bg-white dark:bg-slate-700 shadow-xl ring-4 ring-white/50 dark:ring-slate-700/50 ring-offset-2 ring-offset-emerald-600 transition-colors overflow-hidden">
+                                    {user?.profileImage ? (
+                                        <img
+                                            src={user.profileImage}
+                                            alt={user.full_name || "Profile"}
+                                            className="w-full h-full rounded-full object-cover"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full rounded-full bg-gradient-to-br from-emerald-100 to-teal-50 dark:from-emerald-900 dark:to-teal-800 flex items-center justify-center text-4xl font-bold text-emerald-700 dark:text-emerald-300 select-none">
+                                            {getInitials(user?.full_name)}
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="absolute bottom-1 right-1 w-9 h-9 bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:bg-emerald-700 transition-all transform hover:scale-105" title="Upload Photo">
                                     <i className="ri-camera-fill text-sm"></i>

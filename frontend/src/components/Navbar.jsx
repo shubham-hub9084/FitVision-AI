@@ -127,11 +127,19 @@ const Navbar = () => {
                             <div className="relative">
                                 <button
                                     onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                                    className="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-emerald-700 transition-colors ring-2 ring-transparent focus:ring-emerald-200"
+                                    className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer transition-colors ring-2 ring-transparent focus:ring-emerald-200 overflow-hidden bg-emerald-600 hover:bg-emerald-700"
                                 >
-                                    <span className="text-white text-sm font-semibold">
-                                        {user?.full_name ? user.full_name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : 'U'}
-                                    </span>
+                                    {user?.profileImage ? (
+                                        <img
+                                            src={user.profileImage}
+                                            alt={user.full_name || "User Profile"}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <span className="text-white text-sm font-semibold">
+                                            {user?.full_name ? user.full_name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : 'U'}
+                                        </span>
+                                    )}
                                 </button>
 
                                 {/* Dropdown */}

@@ -17,6 +17,7 @@ import PrivateRoute from './PrivateRoute';
 import Layout from './Layout';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
+import Chatbot from './components/Chatbot/Chatbot';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -39,6 +40,7 @@ const App = () => {
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
       <AuthProvider>
         <ThemeProvider>
+          <Chatbot />
           <Routes>
             <Route path='/' element={<HomePage />} />
 
